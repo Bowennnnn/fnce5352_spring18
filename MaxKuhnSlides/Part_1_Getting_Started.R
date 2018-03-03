@@ -51,6 +51,9 @@ library(purrr)
 by_alley <- split(ames, ames$Alley)
 is_list(by_alley)
 
+#check out purrr cheat sheet...
+ames %>% group_by(Alley) %>% nest
+
 map(by_alley, nrow)
 
 # or better yet:
